@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Dashboard</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="dashboard.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
+</head>
+<body>
+<div ng-app="dashboard">
+<nav class="navbar navbar-default">
+    <div class="container container-fluid" ng-controller="frame">
+        <div class="navbar-header">
+            <a class="navbar-brand" href="#"><strong>VenturX</strong></a>
+        </div>
+        <ul class="nav navbar-nav navbar-right">
+            <li><a href="#" ng-click="profile()"><strong> Hello, <span ng-bind="username"></span></strong></a></li>
+            <li><a href="#" ng-click="logout()"> Log Out</a></li>
+        </ul>
+    </div>
+</nav>
+<div class="container">
+
+<div class="row sub-container" ng-controller="topSection">
+    <div class="col-md-3">
+        <img src="Capture1.PNG" alt="profile pic" class="img-rounded profile-img">
+    </div>
+    <div class="col-md-9 table-container">
+        <table>
+            <tr>
+                <td class="block1"><strong>Market</strong></td>
+                <td class="block2">Fill in who are your customers?</td>
+                <td class="block3"></td>
+            </tr>
+            <tr>
+                <td class="block1"><strong>Pain</strong></td>
+                <td class="block2">What is the pain statement that you are trying to solve for them?</td>
+                <td class="block3"></td>
+            </tr>
+            <tr>
+                <td class="block1"><strong>Benefit</strong></td>
+                <td class="block2">What is the benefit that will match that pain statement?</td>
+                <td class="block3">
+                    <button type="button" class="btn btn-default" ng-click="editProfile()">Edit Profile</button>
+                </td>
+            </tr>
+        </table>
+    </div>
+</div>
+
+
+
+<div>
+    <div class="text-center heading-div">
+        <p>
+      <span class="heading-text">How is <strong>VenturX</strong><a href="#">
+          <span class="glyphicon glyphicon-pencil"></span>
+        </a> doing today?</span> <span class="text-muted sub-text">Check dashboard</span>
+        </p>
+    </div>
+
+    <div>
+        <div class="container">
+            <div class="row sub-container">
+                <div class="col-md-3 col-sm-6">
+                    <div class="progress dash1">
+                <span class="progress-left">
+                    <span class="progress-bar"></span>
+                </span>
+                        <span class="progress-right">
+                    <span class="progress-bar"></span>
+                </span>
+                        <div class="progress-value">75% Product</div>
+                    </div>
+                </div>
+                <div class="col-md-3 col-sm-6">
+                    <div class="progress dash2">
+                <span class="progress-left">
+                    <span class="progress-bar"></span>
+                </span>
+                        <span class="progress-right">
+                    <span class="progress-bar"></span>
+                </span>
+                        <div class="progress-value">6 months runway</div>
+                    </div>
+                </div>
+                <div class="col-md-3 col-sm-6">
+                    <div class="progress dash3">
+                <span class="progress-left">
+                    <span class="progress-bar"></span>
+                </span>
+                        <span class="progress-right">
+                    <span class="progress-bar"></span>
+                </span>
+                        <div class="progress-value"><p>60% conversion</p></div>
+                    </div>
+                </div>
+                <div class="col-md-3 col-sm-6">
+                    <div class="progress dash4">
+                <span class="progress-left">
+                    <span class="progress-bar"></span>
+                </span>
+                        <span class="progress-right">
+                    <span class="progress-bar"></span>
+                </span>
+                        <div class="progress-value">100% engagement</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div>
+    <div class="alert alert-warning">
+        <p><strong>Small conversion?</strong> learn what you can do to <strong>rise your conversion</strong>.</p>
+    </div>
+    <div class="alert alert-danger">
+        <p><strong>Low product score? Try this</strong> to get more ...</p>
+    </div>
+</div>
+</div>
+
+<footer>
+    <p>&copy;VenturX. Created by Grevil Lopes</p>
+</footer>
+</div>
+<script type="text/javascript" src="dashboard.js"></script>
+
+</body>
+</html>
